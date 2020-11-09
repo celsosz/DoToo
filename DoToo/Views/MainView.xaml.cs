@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using DoToo.ViewModels;
@@ -20,6 +14,8 @@ namespace DoToo.Views
 
             viewModel.Navigation = Navigation;
             BindingContext = viewModel;
+
+            ItemsListView.ItemSelected += (s, e) => ItemsListView.SelectedItem = null;
         }
     }
 }
