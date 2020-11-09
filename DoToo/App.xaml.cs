@@ -2,6 +2,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using DoToo.Views;
+
 namespace DoToo
 {
     public partial class App : Application
@@ -10,7 +12,7 @@ namespace DoToo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(Resolver.Resolve<MainView>());
         }
 
         protected override void OnStart()
